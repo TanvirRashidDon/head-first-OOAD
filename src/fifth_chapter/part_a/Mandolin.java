@@ -1,8 +1,6 @@
-package fifth_chapter;
+package fifth_chapter.part_a;
 
-import first_chapter.GuitarSpec;
-
-public class Mandolin  extends Instrument{
+public class Mandolin  extends Instrument {
 
     private MandolinSpec spec;
 

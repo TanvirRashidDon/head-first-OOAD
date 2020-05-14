@@ -1,4 +1,4 @@
-package fifth_chapter;
+package fifth_chapter.part_a;
 
 public enum Style {
     A, F;

@@ -1,7 +1,6 @@
-package fifth_chapter;
+package fifth_chapter.part_a;
 
 import first_chapter.Builder;
-import first_chapter.GuitarSpec;
 import first_chapter.Type;
 import first_chapter.Wood;
 

@@ -1,6 +1,6 @@
 package first_chapter;
 
-import fifth_chapter.InstrumentSpec;
+import fifth_chapter.part_a.InstrumentSpec;
 
 public class GuitarSpec extends InstrumentSpec {
 

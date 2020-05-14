@@ -1,9 +1,9 @@
 package first_chapter;
 
-import fifth_chapter.Instrument;
-import fifth_chapter.InstrumentSpec;
-import fifth_chapter.Mandolin;
-import fifth_chapter.MandolinSpec;
+import fifth_chapter.part_a.Instrument;
+import fifth_chapter.part_a.InstrumentSpec;
+import fifth_chapter.part_a.Mandolin;
+import fifth_chapter.part_a.MandolinSpec;
 
 import java.util.Iterator;
 import java.util.LinkedList;

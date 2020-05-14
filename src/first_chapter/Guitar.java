@@ -1,6 +1,6 @@
 package first_chapter;
 
-import fifth_chapter.Instrument;
+import fifth_chapter.part_a.Instrument;
 
 public class Guitar extends Instrument {
 

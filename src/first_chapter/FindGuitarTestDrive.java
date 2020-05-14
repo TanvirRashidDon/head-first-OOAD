@@ -1,8 +1,8 @@
 package first_chapter;
 
-import fifth_chapter.Mandolin;
-import fifth_chapter.MandolinSpec;
-import fifth_chapter.Style;
+import fifth_chapter.part_a.Mandolin;
+import fifth_chapter.part_a.MandolinSpec;
+import fifth_chapter.part_a.Style;
 
 import java.util.Iterator;
 import java.util.List;

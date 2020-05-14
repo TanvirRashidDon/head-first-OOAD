@@ -1,10 +1,10 @@
-package fifth_chapter;
+package fifth_chapter.part_a;
 
 import first_chapter.Builder;
 import first_chapter.Type;
 import first_chapter.Wood;
 
-public class MandolinSpec extends InstrumentSpec{
+public class MandolinSpec extends InstrumentSpec {
 
     private Style style;
 

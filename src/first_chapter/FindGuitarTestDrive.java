@@ -7,10 +7,10 @@ public class FindGuitarTestDrive {
         initializeInventory(inventory);
 
         Guitar whatUserLike1 = new Guitar("A445", "someBuilder", "someModel", "someType",
-                "someBackWood", "someTopWood", 1449.99);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1449.99);
 
-        Guitar whatUserLike2 = new Guitar("a445", "someBuilder", "someModel", "someType",
-                "someBackWood", "someTopWood", 1449.99); // only model name is in smaller case
+        Guitar whatUserLike2 = new Guitar("A445", "someBuilder", "someModel", "someType",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1449.99);
 
         Guitar guitar = inventory.search(whatUserLike1);
 
@@ -28,8 +28,8 @@ public class FindGuitarTestDrive {
     }
     private static void initializeInventory (Inventory inventory){
         inventory.addGuitar("A445", "someBuilder", "someModel", "someType",
-                "someBackWood", "someTopWood", 1449.99);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1449.99);
         inventory.addGuitar("A445", "someBuilder", "someModel", "someType",
-                "someBackWood", "someTopWood", 1549.99);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1549.99);
     }
 }

@@ -6,16 +6,21 @@ public class FindGuitarTestDrive {
     public void doSomething() {
         initializeInventory(inventory);
 
-        Guitar whatUserLike = new Guitar("A445", "someBuilder", "someModel", "someType",
+        Guitar whatUserLike1 = new Guitar("A445", "someBuilder", "someModel", "someType",
                 "someBackWood", "someTopWood", 1449.99);
 
-        Guitar guitar = inventory.search(whatUserLike);
+        Guitar whatUserLike2 = new Guitar("a445", "someBuilder", "someModel", "someType",
+                "someBackWood", "someTopWood", 1449.99); // only model name is in smaller case
+
+        Guitar guitar = inventory.search(whatUserLike1);
+
+        // Guitar guitar = inventory.search(whatUserLike2); // No guitar will be found as model name(A445) is in smaller case
 
         if (guitar != null){
             System.out.println("You might like this : " +
                     guitar.getBuilder() + " " + guitar.getModel() + " " +
                     guitar.getType() + " " + guitar.getBackWood() + " " +
-                    guitar.getTopWood() + " Only at " + guitar.getPrice() + "$");
+                    guitar.getTopWood() + " (Only at " + guitar.getPrice() + "$)");
         }else {
             System.out.println("We have nothing for your");
         }

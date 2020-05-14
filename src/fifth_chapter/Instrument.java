@@ -23,5 +23,5 @@ public abstract class Instrument {
         this.price = price;
     }
 
-    public abstract InstrumentSpec getSpec();
+    //public abstract InstrumentSpec getSpec();
 }

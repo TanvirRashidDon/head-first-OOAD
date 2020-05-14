@@ -9,11 +9,11 @@ public class FindGuitarTestDrive {
     public void doSomething() {
         initializeInventory(inventory);
 
-        Guitar whatUserLike1 = new Guitar("A445", Builder.OLSON, "someModel", Type.ACOUSTIC,
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1449.99);
+        Guitar whatUserLike1 = new Guitar("A445", 1449.99, new GuitarSpec("O-423",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON));
 
-        Guitar whatUserLike2 = new Guitar("A445", Builder.OLSON, "someModel", Type.ACOUSTIC,
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1449.99);
+        Guitar whatUserLike2 = new Guitar("a445", 1449.99, new GuitarSpec("O-423",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON));
 
         // Guitar guitar = inventory.search(whatUserLike1);
 
@@ -23,23 +23,22 @@ public class FindGuitarTestDrive {
             System.out.println("You might like this : ");
             for(Iterator i = matchingGuitars.iterator(); i.hasNext(); ){
                 Guitar guitar = (Guitar) i.next();
-                System.out.println("We have a " + guitar.getBuilder() + " " + guitar.getModel() + " " +
-                        guitar.getType() + "guitar\n\t" + guitar.getBackWood() + " back and side\n\t" +
-                        guitar.getTopWood() + " top.\nYou can have it  for only " +
-                        guitar.getPrice() + "$\n-------");
+                System.out.println("We have a " + guitar.getSpec().getBuilder() + " " +
+                        guitar.getSpec().getModel() + " " + guitar.getSpec().getType() + " guitar\n\t" +
+                        guitar.getSpec().getBackWood() + " back and side\n\t" + guitar.getSpec().getTopWood() +
+                        " top.\nYou can have it  for only " + guitar.getPrice() + "$\n-------");
             }
-
         }else {
-            System.out.println("We have nothing for your");
+            System.out.println("We have nothing for you");
         }
 
     }
     private static void initializeInventory (Inventory inventory){
-        inventory.addGuitar("A445", Builder.OLSON, "someModel", Type.ACOUSTIC,
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1449.99);
-        inventory.addGuitar("A445", Builder.OLSON, "someModel", Type.ACOUSTIC,
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1549.99);
-        inventory.addGuitar("A445", Builder.OLSON, "someModel", Type.ACOUSTIC,
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, 1449.99);
+        inventory.addGuitar("a425", 1449.99, "O-403",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
+        inventory.addGuitar("a445", 1999.99, "O-423",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
+        inventory.addGuitar("a445", 1659.99, "O-423",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
     }
 }

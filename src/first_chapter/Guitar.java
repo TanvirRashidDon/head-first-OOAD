@@ -1,52 +1,31 @@
 package first_chapter;
 
 public class Guitar {
-    private String serialNumber, model;
+    private String serialNumber;
     private double price;
-    private Wood backWood;
-    private Wood topWood;
-    private Type type;
-    private Builder builder;
 
-    public Guitar(String serialNumber, Builder builder, String model, Type type, Wood backWood, Wood topWood, double price) {
+    private GuitarSpec spec;
+
+    public Guitar(String serialNumber, double price, GuitarSpec spec) {
         this.serialNumber = serialNumber;
-        this.builder = builder;
-        this.model = model;
-        this.type = type;
-        this.backWood = backWood;
-        this.topWood = topWood;
         this.price = price;
+        this.spec = spec;
     }
 
     public String getSerialNumber() {
         return serialNumber;
     }
 
-    public Builder getBuilder() {
-        return builder;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    public Wood getBackWood() {
-        return backWood;
-    }
-
-    public Wood getTopWood() {
-        return topWood;
-    }
-
     public double getPrice() {
         return price;
+    }
+
+    public GuitarSpec getSpec() {
+        return spec;
     }
 
     public void setPrice(double price){
         this.price = price;
     }
+
 }

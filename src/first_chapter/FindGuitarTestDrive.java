@@ -9,11 +9,11 @@ public class FindGuitarTestDrive {
     public void doSomething() {
         initializeInventory(inventory);
 
-        Guitar whatUserLike1 = new Guitar("A445", 1449.99, new GuitarSpec("O-423",
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON));
+        GuitarSpec whatUserLike1 = new GuitarSpec("O-423",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
 
-        Guitar whatUserLike2 = new Guitar("a445", 1449.99, new GuitarSpec("O-423",
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON));
+        GuitarSpec whatUserLike2 = new GuitarSpec("O-423",
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
 
         // Guitar guitar = inventory.search(whatUserLike1);
 

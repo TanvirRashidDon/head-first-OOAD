@@ -10,10 +10,10 @@ public class FindGuitarTestDrive {
         initializeInventory(inventory);
 
         GuitarSpec whatUserLike1 = new GuitarSpec("O-423",
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON, 6);
 
         GuitarSpec whatUserLike2 = new GuitarSpec("O-423",
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON, 6);
 
         // Guitar guitar = inventory.search(whatUserLike1);
 
@@ -35,10 +35,10 @@ public class FindGuitarTestDrive {
     }
     private static void initializeInventory (Inventory inventory){
         inventory.addGuitar("a425", 1449.99, "O-403",
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON, 6);
         inventory.addGuitar("a445", 1999.99, "O-423",
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON, 6);
         inventory.addGuitar("a445", 1659.99, "O-423",
-                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON);
+                Wood.BRAZILIAN_ROSEWOOD, Wood.INDIAN_ROSEWOOD, Type.ACOUSTIC, Builder.OLSON, 6);
     }
 }

@@ -38,8 +38,9 @@ public class Inventory {
             if (searchGuitar.getBuilder() != guitar.getBuilder())
                 continue;
 
-            String model = searchGuitar.getModel();
-            if ((model != null) && (!model.equals("")) && (!model.equals(guitar.getModel())))
+            String model = searchGuitar.getModel().toLowerCase();
+            if ((model != null) && (!model.equals("")) &&
+                    (!model.equals(guitar.getModel().toLowerCase())))
                 continue;
 
             if (searchGuitar.getType() != guitar.getType())

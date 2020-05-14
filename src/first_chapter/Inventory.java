@@ -11,7 +11,7 @@ public class Inventory {
         guitars = new LinkedList();
     }
 
-    public void addGuitar(String serialNumber, String builder, String model, String type, Wood backWood, Wood topWood, double price){
+    public void addGuitar(String serialNumber, Builder builder, String model, Type type, Wood backWood, Wood topWood, double price){
         Guitar guitar = new Guitar(serialNumber, builder, model, type, backWood, topWood, price);
 
         guitars.add(guitar);
@@ -35,16 +35,14 @@ public class Inventory {
             // Ignore serial number since that's unique
             // Ignore price number since that's unique
 
-            String builder = searchGuitar.getBuilder();
-            if ((builder != null) && (!builder.equals("")) && (!builder.equals(guitar.getBuilder())))
+            if (searchGuitar.getBuilder() != guitar.getBuilder())
                 continue;
 
             String model = searchGuitar.getModel();
             if ((model != null) && (!model.equals("")) && (!model.equals(guitar.getModel())))
                 continue;
 
-            String type = searchGuitar.getType();
-            if ((type != null) && (!type.equals("")) && (!type.equals(guitar.getType())))
+            if (searchGuitar.getType() != guitar.getType())
                 continue;
 
             if (guitar.getBackWood() != searchGuitar.getBackWood())

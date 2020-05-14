@@ -6,12 +6,14 @@ import first_chapter.Wood;
 
 public class MandolinSpec extends InstrumentSpec{
 
-    public MandolinSpec(String model, Wood backWood, Wood topWood, Type type, Builder builder, int numString) {
+    private Style style;
+
+    public MandolinSpec(String model, Wood backWood, Wood topWood, Type type, Builder builder, Style style) {
         super(model, backWood, topWood, type, builder);
-        //this.numString = numString;
+        this.style = style;
     }
 
-    //public int getNumString(){ return numString; }
+    public Style getStyle(){ return style; }
 
     public boolean matches(InstrumentSpec otherSpec){
         if (!super.matches(otherSpec))
@@ -20,8 +22,8 @@ public class MandolinSpec extends InstrumentSpec{
             return false;
 
         MandolinSpec spec = (MandolinSpec) otherSpec;
-        //if (numString != spec.numString)
-        //    return false;
+        if (style != spec.style)
+            return false;
 
         return true;
     }

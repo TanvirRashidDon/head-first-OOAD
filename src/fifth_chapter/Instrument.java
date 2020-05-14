@@ -22,4 +22,6 @@ public abstract class Instrument {
     public void setPrice(double price){
         this.price = price;
     }
+
+    public abstract InstrumentSpec getSpec();
 }

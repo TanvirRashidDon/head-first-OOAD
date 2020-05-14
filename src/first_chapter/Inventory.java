@@ -1,30 +1,39 @@
 package first_chapter;
 
+import fifth_chapter.Instrument;
+import fifth_chapter.InstrumentSpec;
+import fifth_chapter.Mandolin;
+import fifth_chapter.MandolinSpec;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Inventory {
-    private List guitars;
+    private List inventory;
 
     public Inventory(){
-        guitars = new LinkedList();
+        inventory = new LinkedList();
     }
 
-    public void addGuitar(String serialNumber, Double price, String model, Wood backWood, Wood topWood,
-                          Type type, Builder builder, int numString){
-        GuitarSpec spec = new GuitarSpec(model, backWood, topWood, type, builder, numString);
-        Guitar guitar = new Guitar(serialNumber, price, spec);
+    public void addInstrument(String serialNumber, Double price, InstrumentSpec spec){
+        Instrument instrument = null;
 
-        guitars.add(guitar);
+        if (spec instanceof GuitarSpec){
+            instrument = new Guitar(serialNumber, price, (GuitarSpec) spec);
+        } else if(spec instanceof MandolinSpec){
+            instrument = new Mandolin(serialNumber, price, (MandolinSpec)spec);
+        }
+
+        inventory.add(instrument);
     }
 
-    public Guitar getGuitar(String serialNumber){
-        for(Iterator i = guitars.iterator(); i.hasNext(); ){
-            Guitar guitar = (Guitar) i.next();
+    public Instrument getInstrument(String serialNumber){
+        for(Iterator i = inventory.iterator(); i.hasNext(); ){
+            Instrument instrument = (Instrument) i.next();
 
-            if(guitar.getSerialNumber().equals(serialNumber)){
-                return guitar;
+            if(instrument.getSerialNumber().equals(serialNumber)){
+                return instrument;
             }
         }
         return null;
@@ -33,15 +42,26 @@ public class Inventory {
     public List search(GuitarSpec searchSpec){
         List matchingGuitars = new LinkedList();
 
-        for (Iterator i = guitars.iterator(); i.hasNext(); ) {
+        for (Iterator i = inventory.iterator(); i.hasNext(); ) {
+
             Guitar guitar = (Guitar) i.next();
-            // Ignore serial number since that's unique
-            // Ignore price number since that's unique
 
             if(guitar.getSpec().matches(searchSpec))
                 matchingGuitars.add(guitar);
         }
         return matchingGuitars;
+    }
+
+    public List search(MandolinSpec searchSpec){
+        List matchingMandolins = new LinkedList();
+
+        for (Iterator i = inventory.iterator(); i.hasNext(); ) {
+            Instrument instrument = (Instrument) i.next();
+
+            if(instrument.getSpec().matches(searchSpec))
+                matchingMandolins.add(instrument);
+        }
+        return matchingMandolins;
     }
 
 }

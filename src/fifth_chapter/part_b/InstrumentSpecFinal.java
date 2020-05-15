@@ -16,7 +16,7 @@ public class InstrumentSpecFinal {
     }
 
     public Object getProperty(String PropertyName){
-        return properties.get(properties);
+        return properties.get(PropertyName);
     }
 
     public Map getProperties(){

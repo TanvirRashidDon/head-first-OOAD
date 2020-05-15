@@ -1,8 +1,5 @@
 package fifth_chapter.part_b;
 
-import first_chapter.Guitar;
-import first_chapter.GuitarSpec;
-
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
